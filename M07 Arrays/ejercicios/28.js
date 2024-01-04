@@ -3,10 +3,10 @@ function esArrayNoVacio(arr) {
   // Comprueba si este argumento es un array y si tiene al menos un elemento.
   // Si es así, retorna true, de lo contrario, retorna false.
   // Tu código:
-  if ( arr.lenth > 0) {
-    return true ; 
+  if (Array.isArray(arr) && arr.length > 0) {
+    return true;
   } else {
-    return false ; 
+    return false;
   }
 }
 

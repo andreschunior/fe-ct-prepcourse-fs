@@ -10,10 +10,13 @@ function breakStatement(num) {
       num += 2 ;
       nuevoarray.push(num)
 
-    if ( nuevoarray.length === num ) {
-      break ; 
+    if ( nuevoarray[nuevoarray.length -1] === i ) {
+      return "Se interrumpió la ejecución"; 
+      break ;
+     
     }
   }
+  return nuevoarray;
 }
 
 

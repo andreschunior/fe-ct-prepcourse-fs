@@ -3,7 +3,7 @@ function convertirStringAMayusculas(array) {
   // Retorna el arreglo resultante.
   // Tu código:
   for ( let i = 0 ; i < array.length ; i ++) {
-    array [i].toUppercase();
+   array[i] = array [i].toUpperCase();
   }
   return array;
 }

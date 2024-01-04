@@ -6,24 +6,36 @@ function encontrarNumeroFaltante(numeros) {
   // Tu código:
 
   
-  let sumaEsperada; 
-  let sumaReal = 0 ; 
+ 
   if (numeros.length === 0) {
     return null;
   }
 
+  if (numeros[0] == (numeros[numeros.length - 1] - (numeros.length - 1)) ){
+    return null ;
+  }
+
+  let sumaEsperada = numeros[0]; 
+  let sumaReal = 0 ; 
+  let primerNumero = numeros[0]   ;
+  
  for ( let i = 0 ; i < numeros.length ; i ++) {
-   
-  sumaReal += numeros [i] ;
-  sumaEsperada.push(numeros[i]) 
+  //sumaEsperada = sumaEsperada + (primerNumero + 1) ;
+  sumaEsperada = sumaEsperada +(primerNumero + i + 1) ;
+  sumaReal += numeros[i];
+
+  console.log('esperada ' + sumaEsperada);
+  console.log('real ' + sumaReal) ; 
+
+  
  }
-  sumaEsperada = numeros.reduce((total, num) => total + num, 0);
+  let diferencia = sumaEsperada - sumaReal ;
+ 
+    return diferencia;
 
+  }
 
-  if (sumaEsperada - sumaReal === 0) return null;
-  else return sumaEsperada;
-}
-
+encontrarNumeroFaltante([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) ; 
 
 
 

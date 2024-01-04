@@ -11,5 +11,3 @@ const buscarElemento = (array, callback) => {
   }
   return "No se encontró el elemento";
 };
-
-module.exports = buscarElemento;

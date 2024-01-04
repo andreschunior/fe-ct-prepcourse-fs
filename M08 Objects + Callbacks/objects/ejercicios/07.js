@@ -8,15 +8,16 @@ const objetoAnidado = {
         propiedad5: 'direccion',
         propiedad6: {
             propiedad7: 'hobbies',
-            propiedad8: {
-                propiedad9: 'valor7'
-            }
+            propiedad8: 'valor8',
+            propiedad9: () => 'valor7'
+            
         }
     },
     obtenerPropiedadAnidada: function() {
-        return this.propiedad3.propiedad6.propiedad8.propiedad9;
+        return this.propiedad3.propiedad6.propiedad9;
     }
 };
 this.propiedad1 ;
 
 module.exports = objetoAnidado;
+ 
