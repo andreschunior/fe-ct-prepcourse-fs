@@ -6,6 +6,17 @@ function deObjetoAarray(objeto) {
   // Estos elementos debe ser cada par clave:valor del objeto recibido.
   // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
   // Tu código:
+const arraypadre = [];
+for (let clave in objeto ){
+  if (objeto.HasOwnProperty(clave)){
+    const arrayHijo = [clave, objeto[clave]];
+    arraypadre.push(arrayHijo);
+  }
+  
+}
+return arraypadre;
+
+
   
 }
 
@@ -15,6 +26,22 @@ function numberOfCharacters(string) {
   // Las letras deben estar en orden alfabético.
   // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
   // Tu código:
+  const cuentaLetras = {} ; 
+  const stringSeparado = string.split('').sort();
+  for ( let letra of stringSeparado) {
+    if (cuentaLetras.hasOwnProperty(letra)) {
+    cuentaLetras[letra]++;
+  } else {
+    cuentaLetras[letra] = 1;
+
+  }
+}
+
+
+  return cuentaLetras; 
+
+
+
 }
 
 function capToFront(string) {
@@ -23,6 +50,20 @@ function capToFront(string) {
   // Retornar el string.
   // [EJEMPLO]: soyHENRY ---> HENRYsoy
   // Tu código:
+  array = '';
+
+  for (let caracter of string ){
+    if ( caracter === caracter.toUpperCase()){
+      array += caracter;
+  }
+
+  for (let caracter of string){
+    if ( caracter === caracter.toLowerCase()){
+      array += caracter ;
+    }
+  }
+  return array ;
+
 }
 
 function asAmirror(frase) {

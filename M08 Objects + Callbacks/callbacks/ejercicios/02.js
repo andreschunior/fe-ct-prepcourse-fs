@@ -3,7 +3,11 @@ function cambiarCadena(string, callback) {
   // La función de callback se encargará de recibir el string y devolverlo con los cambios.
   // Tu código:
   var resultado = callback (string) ;
+  if (callback(string)){
   return resultado;
+  }else {
+    return string;
+  }
 }
 
 

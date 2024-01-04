@@ -3,8 +3,25 @@ function verificarPropiedad(objeto, propiedad) {
   // Retorna true si la tiene, sino retorna false.
   // PISTA: Puedes usar el método hasOwnProperty().
   // Tu código:
-  
- return objeto.hasOwnProperty(propiedad);
+  if (objeto.hasOwnProperty(propiedad) && objeto.propertyIsEnumerable(propiedad)) {
+    return true;
+  }
+
+  // Verificar propiedad heredada
+  let proto = Object.getPrototypeOf(objeto);
+  while (proto) {
+    if (proto.hasOwnProperty(propiedad)) {
+      return true;
+    }
+    proto = Object.getPrototypeOf(proto);
+  }
+
+  return false
+ 
+
+
+
+
 
 };
 
