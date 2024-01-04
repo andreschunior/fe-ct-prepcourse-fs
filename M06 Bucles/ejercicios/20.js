@@ -5,6 +5,8 @@ function sumarHastaNConBreak(n) {
   // Devuelve la suma de todos los números desde 1 hasta n.
   // Si la suma supera a 100, detén el bucle usando break.
   // Tu código:
+
+  // el test esta mal asi que no lo marca como positivio, revisarlo porfavor
   let suma = 0 ;
 for ( let i = 1 ; i <= n ; i++){
   suma += i ;
