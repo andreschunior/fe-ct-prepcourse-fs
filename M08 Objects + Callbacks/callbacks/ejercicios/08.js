@@ -6,8 +6,17 @@ const buscarElemento = (array, callback) => {
   for ( let i = 0 ; i < array.length ; i++) {
     if ( callback(array[i]) === true ) {
       return array[i];
-   
-    } 
+    }  
   }
+  
+  
   return "No se encontró el elemento";
 };
+
+
+
+const array1 = [1, 2, 3, 4, 5];
+const callback1 = (element) => element === 3;
+buscarElemento(array1,callback1)
+
+module.exports = buscarElemento;
